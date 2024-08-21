@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Book</h1>
+        <h4 id="peopleCount">3 People</h4>
+        <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <i class="Search icon"><img src="" alt=""></i>
+    </div>
+        <div class="actions">
+            <button class="add icon" onclick="openPopup()"><img src="image/plus.png" alt=""></button>
+            <button class="delete icon" onclick="deleteAllContacts()"><img src="image/trash-bin (1).png" alt=""></button>
+        </div>
+        <ul class="contact-list">
+        </ul>
+    </div>
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Add/Edit Contact</h2>
+            <input type="hidden" id="contactId">
+            <input type="text" id="contactName" placeholder="Name">
+            <input type="text" id="contactPhone" placeholder="Phone">
+            <input type="file" id="contactImage">
+            <button onclick="saveContact()">Save</button>
+        </div>
+    </div>
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeInfoPopup()">&times;</span>
+            <h2>Contact Info</h2>
+            <p id="infoName"></p>
+            <p id="infoPhone"></p>
+        </div>
+    </div>
+    <footer>
+   
+    </footer>
+</body>
+</html>
